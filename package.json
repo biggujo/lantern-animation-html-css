@@ -2,20 +2,20 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://biggujo.github.io/lantern-animation-html-css/",
+  "homepage": "https://biggujo.github.io/lantern-animation-html-css",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /lantern-animation-html-css/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/biggujo/lantern-animation-html-css.git"
   },
   "keywords": [],
   "author": "Dmytro Ivashchenko <gen.style22@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+    "url": "https://github.com/biggujo/lantern-animation-html-css/issues"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
