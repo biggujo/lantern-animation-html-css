@@ -5,7 +5,7 @@
   "homepage": "https://biggujo.github.io/lantern-animation-html-css",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /lantern-animation-html-css/"
   },
   "repository": {
     "type": "git",
