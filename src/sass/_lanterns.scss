@@ -1,0 +1,103 @@
+$yellowColor: #ffb847;
+
+* {
+  // outline: 1px solid tomato;
+}
+
+%lantern-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+}
+
+.lantern-real-line {
+  @extend %lantern-line;
+
+  height: 3px;
+
+  background-color: $yellowColor;
+
+  z-index: 2;
+}
+
+.lanterns {
+  @extend %lantern-line;
+
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 60px;
+
+  @media screen and (max-width: 480px) {
+    padding-inline: 30px;
+  }
+
+  &__lantern-block {
+    position: relative;
+    width: 100px;
+    margin-top: -20px;
+
+    transform-origin: top;
+    animation: lanternStart 1s ease-in-out,
+      lanternAnimation 2s ease-in-out infinite alternate 1000ms;
+
+    @media screen and (max-width: 480px) {
+      width: 60px;
+    }
+  }
+
+  &__lantern-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 80px;
+
+    transform: translate(-50%, 0);
+    border-radius: 5px;
+
+    animation: lanternAnimationInvert 2s ease-in-out infinite alternate;
+
+    background-color: $yellowColor;
+
+    z-index: -1;
+  }
+
+  &__lantern-svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+$degree: 15deg;
+
+@keyframes lanternStart {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(-$degree);
+  }
+}
+
+@keyframes lanternAnimation {
+  0% {
+    transform: rotate(-$degree);
+  }
+
+  100% {
+    transform: rotate($degree);
+  }
+}
+
+@keyframes lanternAnimationInvert {
+  0% {
+    transform: rotate($degree - 3deg);
+  }
+
+  100% {
+    transform: rotate(-$degree + 3deg);
+  }
+}
